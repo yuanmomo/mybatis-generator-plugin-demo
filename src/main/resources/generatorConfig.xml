@@ -7,7 +7,11 @@
     <!-- 加载 mbg.properties 文件  -->
     <properties resource="mbg.properties"/>
 
-    <context id="mbg_schema" targetRuntime="MyBatis3" defaultModelType="conditional">
+    <!-- defaultModelType 的三个值 -->
+    <!-- 1. conditional，默认值，类似于 hierarchical。区别是，不会为只有一个字段的数据库表生成一个单独的类。-->
+    <!-- 2. hierarchical，主键生成一个 XxxKey 对象（key class），Blob 等字段单独生成一个对象，其它简单属性在一个对象中（record class）。-->
+    <!-- 3. flat，所有字段（主键、blob 等）全部生成在一个对象中。-->
+    <context id="mbg_schema" targetRuntime="MyBatis3" defaultModelType="flat">
 
 
         <!-- 生成的实体类（Bean）自动继承 java.io.Serializable interface. -->
@@ -83,6 +87,12 @@
             <property name="dynamic" value="true"/>
 
             <!-- 自增长组件 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="blob_table" domainObjectName="BlobTable">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="multi_key_table" domainObjectName="MultiKeyTable">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
 
