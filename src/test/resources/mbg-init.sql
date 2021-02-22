@@ -1,19 +1,7 @@
-/*
- Navicat Premium Data Transfer
+-- delete database first
+drop database if exists `mbg` ;
 
- Source Server         : localhost
- Source Server Type    : MySQL
- Source Server Version : 50729
- Source Host           : localhost:3306
- Source Schema         : mbg
-
- Target Server Type    : MySQL
- Target Server Version : 50729
- File Encoding         : 65001
-
- Date: 21/06/2020 19:27:21
-*/
-
+-- create a new database
 CREATE DATABASE `mbg` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 use `mbg`;
 

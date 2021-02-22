@@ -1,4 +1,4 @@
-package com.github.yuanmomo.mybatis.generator.test;
+package com.github.yuanmomo.mybatis.generator.test.table;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.github.yuanmomo.mybatis.generator.test.BaseTest;
 import com.github.yuanmomo.mybatis.generator.test.bean.MbgTable;
 import com.github.yuanmomo.mybatis.generator.test.mapper.MbgTableMapper;
 
@@ -18,7 +19,7 @@ import com.github.yuanmomo.mybatis.generator.test.mapper.MbgTableMapper;
  *
  */
 
-public class MbgTableMapperTest extends BaseTest {
+public class TableMapperTest extends BaseTest {
 
     public static SqlSession sqlSession = null;
 
