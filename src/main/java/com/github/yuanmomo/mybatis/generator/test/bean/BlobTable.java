@@ -5,10 +5,12 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import lombok.Builder;
 
-@Data
 @ToString
+@Builder
 @NoArgsConstructor
+@Data
 @EqualsAndHashCode
 public class BlobTable implements Serializable {
 

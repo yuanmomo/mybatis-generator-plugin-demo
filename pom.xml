@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.github.yuanmomo</groupId>
             <artifactId>mybatis-generator-plugin</artifactId>
-            <version>1.0.10</version>
+            <version>1.0.13</version>
             <scope>compile</scope>
         </dependency>
 
